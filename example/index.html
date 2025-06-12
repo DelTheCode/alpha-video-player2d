@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta
+    name="viewport"
+    content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0,viewport-fit=cover"
+  />
+  <title>Alpha Video Player Example</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    #player-container {
+      width: 375px;
+      height: 652px;
+      /* border: 1px solid red; */
+      box-sizing: border-box;
+      margin: 0 auto;
+      /* background-color: black; */
+    }
+  </style>
+</head>
+<body>
+  <div id="player-container"></div>
+  <script src="/dist/alpha-video-player.js"></script>
+  <script>
+    const VideoPlayer = AlphaVideoPlayer2D.default;
+    const player = new VideoPlayer({
+        el: document.getElementById('player-container'),
+        url: 'assets/test.mp4',
+        width: 375,
+        height: 652,
+        loop: true,
+        autoplay: true,
+        loadedCallback: () => console.log('Video loaded'),
+        endCallback: () => console.log('Video ended')
+    });
+  </script>
+</body>
+</html>

@@ -1,7 +1,11 @@
 {
   "name": "alpha-video-player2d",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist/alpha-video-player.js",
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "scripts": {
     "build": "NODE_ENV=production webpack",
     "dev": "npm run build && NODE_ENV=development webpack serve --open --config webpack.config.js",
